@@ -1,0 +1,29 @@
+name: Run Political Live Tracker
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * *'  # 国际标准时间每天0点（马华时间早上8点）自动起床抓取
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 检出仓库代码
+      uses: actions/checkout@v3
+
+    - name: 设置 Python 环境
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: 运行自动化脚本更新政治数据
+      run: python updater.py
+
+    - name: 将更新后的数据自动 Commit 并 Push 回仓库
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add data/ge16_live.json
+        git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 [Bot] 实时政治局势 Live Data 自动同步更新" && git push)
