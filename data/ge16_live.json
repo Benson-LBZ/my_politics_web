@@ -1,7 +1,40 @@
 {
-  "last_updated": "2026-05-25 00:00",
+  "last_updated": "2026-05-26 02:43",
   "total_seats": 222,
   "required_majority": 112,
-  "alert_news": "系统正在等待 Python 脚本进行首次 Live Data 初始化同步...",
-  "coalitions": []
+  "alert_news": "GE16 选区划分谈判进入白热化，各联盟在东马及北马核心选区的暗涌加剧。",
+  "coalitions": [
+    {
+      "id": "ph",
+      "name": "Pakatan Harapan (PH)",
+      "seats": 86,
+      "color": "#dc3545",
+      "trend": "up",
+      "strategy": "专注巩固西马朝野混战中的城市与华裔基本盘。"
+    },
+    {
+      "id": "pn",
+      "name": "Perikatan Nasional (PN)",
+      "seats": 73,
+      "color": "#0d6efd",
+      "trend": "stable",
+      "strategy": "利用马来核心选区优势，全面渗透半岛西海岸郊区。"
+    },
+    {
+      "id": "bn",
+      "name": "Barisan Nasional (BN)",
+      "seats": 35,
+      "color": "#0a2240",
+      "trend": "down",
+      "strategy": "走传统基层路线，在混合选区扮演关键少数平衡者。"
+    },
+    {
+      "id": "borneo",
+      "name": "Borneo Blocks (GPS/GRS)",
+      "seats": 28,
+      "color": "#ffc107",
+      "trend": "up",
+      "strategy": "东马本土意识高涨，保持高姿态的‘造王者’政治筹码。"
+    }
+  ]
 }
